@@ -5,18 +5,16 @@ import firma.utils.DialogsUnits;
 import java.sql.*;
 
 /**
- * Created by   on 2017-06-08.
+ * Created by Matball on 2017-06-10.
  */
-public class PracownikModel {
+public class UmowaModel {
 
     private static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:";
     private static final String USER = "SYSTEM";
     private static final String PASS = "oracle";
 
-    public void savePracownikInDateBase(String imie_pracownika,String nazwisko_pracownika,String stanowisko_pracownika, String plec_pracownika
-            ,String pesel_pracownika,String data_zatrudnienia_pracownika,String data_urodzenia_pracownika,String czy_pracuje_aktualnie
-            ,String nr_konta_pracownika,String nr_telefonu_pracownika,String email_pracownika,String id_centrala
-            ,String id_placowka_sprzedarzy,String id_placowka_naprawacza){
+    public void saveUmowaInDateBase(String data_zawarcia_umowa,String data_konca_umowa,String opis_umowa,String znizka_na_telefon
+            ,String kara_za_zerwanie_umowa,String opcjonalny_telefon_komorka,String id_centrala_umowa,String id_pracownik,String id_klienta){
 
         int numberOfRecord=0;
         /**
@@ -44,11 +42,11 @@ public class PracownikModel {
             stmt.close();
             connection.close();
 
-
         }catch (SQLException e){
             System.out.println("Connection to DataBase failed ! Check output console");
         }
         System.out.println("liczba rekordów: "+numberOfRecord);
+
         /**
          * niżej blok try catch w którym następuje wysłanie polecenia insert do bazy danych w kórym jest wstawiany rekord którego pola są wczytywane
          * z odpowiednich textField w AddWynagrodzenie.fxml pole id_wynagrodzenie jest ustawiane automatycznie poprzez wcześniejsze zapytanie do bazy
@@ -56,13 +54,15 @@ public class PracownikModel {
          */
         try{
 
+
             Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:", "SYSTEM", "oracle");
             Statement stmt = conn.createStatement();
 
             String sql;
-            sql = "insert into pracownik values ("+(numberOfRecord+1)+","+imie_pracownika+","+nazwisko_pracownika+","+stanowisko_pracownika+","+plec_pracownika
-                +","+pesel_pracownika+",'"+data_zatrudnienia_pracownika+"','"+data_urodzenia_pracownika+"',"+czy_pracuje_aktualnie+"'"+nr_konta_pracownika
-                +","+nr_telefonu_pracownika+","+email_pracownika+","+id_centrala+","+id_placowka_sprzedarzy+","+id_placowka_naprawacza+")";
+            sql= "insert into pracownik values ("+(numberOfRecord+1)+",'"+data_zawarcia_umowa+"','" +data_konca_umowa+"',"+opis_umowa+","+","+znizka_na_telefon+","
+                    +","+kara_za_zerwanie_umowa+","+opcjonalny_telefon_komorka+","+id_centrala_umowa+","+id_pracownik+","+id_klienta+")";
+
+
             System.out.println(sql);
 
             stmt.executeUpdate(sql);
@@ -71,12 +71,15 @@ public class PracownikModel {
             conn.close();
             DialogsUnits.acceptDialog();
 
+
+
+
+
+
         }catch (SQLException e){
             System.out.println("Connection to DataBase failed ! Check output consloe");
             DialogsUnits.errorDialog(e.getMessage());
         }
-
-
-
     }
+
 }

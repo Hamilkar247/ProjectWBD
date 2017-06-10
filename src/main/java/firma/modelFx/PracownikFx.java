@@ -9,6 +9,7 @@ import java.time.LocalDate;
  * Created by   on 2017-06-08.
  */
 public class PracownikFx {
+
     private IntegerProperty id_pracownik = new SimpleIntegerProperty();
     private StringProperty imie = new SimpleStringProperty();
     private StringProperty nazwisko = new SimpleStringProperty();

@@ -3,6 +3,7 @@ package firma.utils;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.*;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
@@ -25,6 +26,7 @@ public class DialogsUnits {
         informationAlert.setContentText(bundles.getString("about.content"));
 
         informationAlert.showAndWait();
+
     }
 
     /**
@@ -101,5 +103,19 @@ public class DialogsUnits {
         chooseAlert.showAndWait();
 
         return result[0];
+    }
+
+    /**
+     * Okno Wyskakujące po pomyslnym zapisie w bazie danych wprowadzonych informacji
+     */
+    public static void acceptDialog(){
+        Alert acceptAlert = new Alert(Alert.AlertType.INFORMATION);
+        acceptAlert.setTitle(bundles.getString("accept.title"));
+        acceptAlert.setHeaderText(bundles.getString("accept.header"));
+
+        ImageView image = new ImageView("/icons/confirmation.png");
+        acceptAlert.getDialogPane().setContent(image);
+
+        acceptAlert.showAndWait();
     }
 }

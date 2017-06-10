@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckMenuItem;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -44,13 +45,9 @@ public class MainController {
     public void setCenter(String fxmlPath){
         borderPane.setCenter(FxmlUtils.fxmlLoader(fxmlPath));
     }
-    /**
-     * Wczytanie z klasy FxmlUtils pliku FXML i ustawienie go w przy lewej
-     * @param fxmlPath sciezka do pliku fxml
-     */
-    public void setLeft(String fxmlPath){
-        borderPane.setLeft(FxmlUtils.fxmlLoader(fxmlPath));
-    }
+
+
+
 
 
     /**

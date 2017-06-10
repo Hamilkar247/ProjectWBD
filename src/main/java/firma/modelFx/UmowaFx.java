@@ -15,7 +15,7 @@ public class UmowaFx {
     private StringProperty opis = new SimpleStringProperty();
     private IntegerProperty znizka_na_telefon = new SimpleIntegerProperty();
     private IntegerProperty kara_za_zerwanie = new SimpleIntegerProperty();
-    private BooleanProperty opcojnalny_telefon = new SimpleBooleanProperty();
+    private BooleanProperty opcjonalny_telefon = new SimpleBooleanProperty();
     private IntegerProperty id_centrala = new SimpleIntegerProperty();
     private IntegerProperty id_pracownik = new SimpleIntegerProperty();
     private IntegerProperty id_klienta = new SimpleIntegerProperty();
@@ -96,15 +96,15 @@ public class UmowaFx {
     }
 
     public boolean isOpcojnalny_telefon() {
-        return opcojnalny_telefon.get();
+        return opcjonalny_telefon.get();
     }
 
     public BooleanProperty opcojnalny_telefonProperty() {
-        return opcojnalny_telefon;
+        return opcjonalny_telefon;
     }
 
     public void setOpcojnalny_telefon(boolean opcojnalny_telefon) {
-        this.opcojnalny_telefon.set(opcojnalny_telefon);
+        this.opcjonalny_telefon.set(opcojnalny_telefon);
     }
 
     public int getId_centrala() {
@@ -152,7 +152,7 @@ public class UmowaFx {
                 ", opis=" + opis +
                 ", znizka_na_telefon=" + znizka_na_telefon +
                 ", kara_za_zerwanie=" + kara_za_zerwanie +
-                ", opcojnalny_telefon=" + opcojnalny_telefon +
+                ", opcojnalny_telefon=" + opcjonalny_telefon +
                 ", id_centrala=" + id_centrala +
                 ", id_pracownik=" + id_pracownik +
                 ", id_klienta=" + id_klienta +

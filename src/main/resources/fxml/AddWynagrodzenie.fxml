@@ -9,30 +9,23 @@
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="firma.controllers.AddWynagrodzenieController">
     <children>
-        <Label prefHeight="14.0" prefWidth="148.0" text="id_wynagrodzenie" textAlignment="JUSTIFY" textFill="RED">
-            <padding>
-                <Insets bottom="5.0" left="5.0" right="5.0" />
-            </padding>
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Label>
-        <TextField fx:id="id_wynagrodzenieTF">
-            <padding>
-                <Insets bottom="5.0" left="5.0" right="5.0" />
-            </padding>
-        </TextField>
-        <Label text="data_zaplaty" />
+      <Label alignment="CENTER" prefHeight="30.0" prefWidth="150.0" text="%add.wynagrodzenie.title" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+        <Label text="%DB.data_zaplaty" />
         <TextField fx:id="data_zaplatyTF" />
-        <Label text="kwota_bazowa" />
+      <Label text="%date.format" textFill="#802525" />
+        <Label text="%DB.kwota_bazowa" />
         <TextField fx:id="kwota_bazowa_TF" />
-        <Label text="przelicznik_etatu" />
+        <Label text="%DB.przelicznik_etatu" />
         <TextField fx:id="przelicznik_etatuTF" />
-        <Label text="przelicznik_stanowiska" />
+        <Label text="%DB.przelicznik_stanowiska" />
         <TextField fx:id="przelicznik_stanowiskaTF" />
-        <Label text="premia" />
+        <Label text="%DB.premia" />
         <TextField fx:id="premiaTF" />
-        <Label text="id_pracownik">
+        <Label text="%DB.id_pracownika">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>

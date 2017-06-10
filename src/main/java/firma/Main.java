@@ -12,16 +12,20 @@ import javafx.stage.Stage;
  */
 public class Main extends Application{
 
+
     public static final String BORDER_PANEL_MAIN_FXML = "/fxml/BorderPanelMain.fxml";
 
     public static void main(String[] args) {
         launch(args);
+
     }
+
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
         Pane borderPane = FxmlUtils.fxmlLoader(BORDER_PANEL_MAIN_FXML);
+
 
         primaryStage.setScene(new Scene(borderPane));
         primaryStage.setTitle(FxmlUtils.getResourceBundle().getString("title.application"));

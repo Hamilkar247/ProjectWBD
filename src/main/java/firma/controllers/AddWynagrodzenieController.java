@@ -1,14 +1,12 @@
 package firma.controllers;
 
+import firma.modelFx.WynagrodzenieModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
 public class AddWynagrodzenieController {
-
-    @FXML
-    private TextField id_wynagrodzenieTF;
 
     @FXML
     private TextField data_zaplatyTF;
@@ -31,9 +29,28 @@ public class AddWynagrodzenieController {
     @FXML
     private Button AddWynagrodzenieButton;
 
-    @FXML
-    void AddWynagrodzenie(ActionEvent event) {
+    private WynagrodzenieModel wynagrodzenieModel;
 
+    @FXML
+    public void  initialize(){
+        this.wynagrodzenieModel= new WynagrodzenieModel();
+    }
+
+    /**
+     * Metoda obługiwana po wciśnieciu przycisku dodaj wynagrodzenie
+     * pobierane sa w niej ciągi znakowe z pól text field a następnie zapisaywane w zmiennych w których sa przesyłane do metody zapisujacej
+     * wynagrodzenie w bazie danych
+     */
+    @FXML
+    void AddWynagrodzenie() {
+        String dataZaplaty = data_zaplatyTF.getText();
+        String kwotaBazowa = kwota_bazowa_TF.getText();
+        String przelicznikEtatu = przelicznik_etatuTF.getText();
+        String przelicznikStanowiska = przelicznik_stanowiskaTF.getText();
+        String premia = premiaTF.getText();
+        String idPracownika = id_pracownikTF.getText();
+
+        wynagrodzenieModel.saveWynagrodzenieInDataBase(dataZaplaty,kwotaBazowa,przelicznikEtatu,przelicznikStanowiska,premia,idPracownika);
     }
 
 }
