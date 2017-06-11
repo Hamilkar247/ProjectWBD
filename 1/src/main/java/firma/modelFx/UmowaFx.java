@@ -15,7 +15,7 @@ public class UmowaFx {
     private StringProperty opis = new SimpleStringProperty();
     private IntegerProperty znizka_na_telefon = new SimpleIntegerProperty();
     private IntegerProperty kara_za_zerwanie = new SimpleIntegerProperty();
-    private BooleanProperty opcojnalny_telefon = new SimpleBooleanProperty();
+    private BooleanProperty opcjonalny_telefon = new SimpleBooleanProperty();
     private IntegerProperty id_centrala = new SimpleIntegerProperty();
     private IntegerProperty id_pracownik = new SimpleIntegerProperty();
     private IntegerProperty id_klienta = new SimpleIntegerProperty();
@@ -51,14 +51,6 @@ public class UmowaFx {
         return data_konca.get();
     }
 
-    public StringProperty data_koncaProperty() {
-        return data_konca;
-    }
-
-    public void setData_konca(String data_konca) {
-        this.data_konca.set(data_konca);
-    }
-
     public String getOpis() {
         return opis.get();
     }
@@ -69,6 +61,10 @@ public class UmowaFx {
 
     public void setOpis(String opis) {
         this.opis.set(opis);
+    }
+
+    public StringProperty data_koncaProperty() {
+        return data_konca;
     }
 
     public int getZnizka_na_telefon() {
@@ -83,6 +79,10 @@ public class UmowaFx {
         this.znizka_na_telefon.set(znizka_na_telefon);
     }
 
+    public void setData_konca(String data_konca) {
+        this.data_konca.set(data_konca);
+    }
+
     public int getKara_za_zerwanie() {
         return kara_za_zerwanie.get();
     }
@@ -95,16 +95,16 @@ public class UmowaFx {
         this.kara_za_zerwanie.set(kara_za_zerwanie);
     }
 
-    public boolean isOpcojnalny_telefon() {
-        return opcojnalny_telefon.get();
+    public boolean isOpcjonalny_telefon() {
+        return opcjonalny_telefon.get();
     }
 
-    public BooleanProperty opcojnalny_telefonProperty() {
-        return opcojnalny_telefon;
+    public BooleanProperty opcjonalny_telefonProperty() {
+        return opcjonalny_telefon;
     }
 
-    public void setOpcojnalny_telefon(boolean opcojnalny_telefon) {
-        this.opcojnalny_telefon.set(opcojnalny_telefon);
+    public void setOpcjonalny_telefon(boolean opcjonalny_telefon) {
+        this.opcjonalny_telefon.set(opcjonalny_telefon);
     }
 
     public int getId_centrala() {
@@ -126,6 +126,8 @@ public class UmowaFx {
     public IntegerProperty id_pracownikProperty() {
         return id_pracownik;
     }
+
+
 
     public void setId_pracownik(int id_pracownik) {
         this.id_pracownik.set(id_pracownik);
@@ -152,7 +154,7 @@ public class UmowaFx {
                 ", opis=" + opis +
                 ", znizka_na_telefon=" + znizka_na_telefon +
                 ", kara_za_zerwanie=" + kara_za_zerwanie +
-                ", opcojnalny_telefon=" + opcojnalny_telefon +
+                ", opcojnalny_telefon=" + opcjonalny_telefon +
                 ", id_centrala=" + id_centrala +
                 ", id_pracownik=" + id_pracownik +
                 ", id_klienta=" + id_klienta +

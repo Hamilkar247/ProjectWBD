@@ -13,7 +13,7 @@ public class TableEmployeeController {
     @FXML
     private TableView<PracownikFx> employeeTableViev;
     @FXML
-    private TableColumn<PracownikFx, String> id_pracownikColumn;
+    private TableColumn<PracownikFx, Number> id_pracownikColumn;
     @FXML
     private TableColumn<PracownikFx, String> imieColumn;
     @FXML
@@ -37,11 +37,11 @@ public class TableEmployeeController {
     @FXML
     private TableColumn<PracownikFx, String> emialColumn;
     @FXML
-    private TableColumn<PracownikFx, String> id_centralaColumn;
+    private TableColumn<PracownikFx, Number> id_centralaColumn;
     @FXML
-    private TableColumn<PracownikFx, String> id_placowak_sprzedarzyColumn;
+    private TableColumn<PracownikFx, Number> id_placowak_sprzedarzyColumn;
     @FXML
-    private TableColumn<PracownikFx, String> id_palcowka_naprawczaColumn;
+    private TableColumn<PracownikFx, Number> id_placowka_naprawczaColumn;
 
     private PracownikModel pracownikModel;
 
@@ -67,6 +67,6 @@ public class TableEmployeeController {
         this.emialColumn.setCellValueFactory(cellData -> cellData.getValue().emailProperty());
         this.id_centralaColumn.setCellValueFactory(cellData -> cellData.getValue().id_centralaProperty());
         this.id_placowak_sprzedarzyColumn.setCellValueFactory(cellData -> cellData.getValue().id_placowka_sprzedarzyProperty());
-        this.id_palcowka_naprawczaColumn.setCellValueFactory(cellData -> cellData.getValue().id_placowka_naprawczaProperty());
+        this.id_placowka_naprawczaColumn.setCellValueFactory(cellData -> cellData.getValue().id_placowka_naprawczaProperty());
     }
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="firma.controllers.TableUmowaController">
+   <children>
+      <TableView fx:id="umowaTableViev" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="1015.0">
+         <columns>
+            <TableColumn fx:id="id_umowyColumn" minWidth="-1.0" prefWidth="100.0" text="%DB.id_umowy_tableUmowa" />
+            <TableColumn fx:id="data_zawarciaColumn" minWidth="-Infinity" prefWidth="100.0" text="%DB.data_zawarcia_tableUmowa" />
+            <TableColumn fx:id="data_koncaColumn" minWidth="-1.0" prefWidth="100.0" text="%DB.data_konca_tableUmowa" />
+            <TableColumn fx:id="opisColumn" minWidth="-Infinity" prefWidth="100.0" text="%DB.opis_tableUmowa" />
+            <TableColumn fx:id="znizka_na_telefonColumn" minWidth="-1.0" prefWidth="100.0" text="%DB.znizka_na_telefon_tableUmowa" />
+            <TableColumn fx:id="kara_za_zerwanieColumn" minWidth="-1.0" prefWidth="100.0" text="%DB.kara_za_zerwanie_tableUmowa" />
+            <TableColumn fx:id="opcjonalny_telefonColumn" minWidth="-1.0" prefWidth="100.0" text="%DB.opcojnalny_telefon_tableUmowa" />
+            <TableColumn fx:id="id_centralaColumn" minWidth="-1.0" prefWidth="100.0" text="%DB.id_centrala_tableUmowa" />
+            <TableColumn fx:id="id_pracownikColumn" minWidth="-1.0" prefWidth="100.0" text="%DB.id_pracownik_tableUmowa" />
+            <TableColumn fx:id="id_klientaColumn" minWidth="-1.0" prefWidth="100.0" text="%DB.id_klienta_tableUmowa" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</VBox>

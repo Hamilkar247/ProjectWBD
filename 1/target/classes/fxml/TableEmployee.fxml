@@ -31,7 +31,7 @@
                               <TableColumn fx:id="emialColumn" prefWidth="100.0" text="%DB.eamil_tabelePracownik" />
                               <TableColumn fx:id="id_centralaColumn" prefWidth="100.0" text="%DB.id_centrala_tabelePracownik" />
                               <TableColumn fx:id="id_placowak_sprzedarzyColumn" prefWidth="100.0" text="%DB.id_placowka_sprzedarzy_tabelePracownik" />
-                              <TableColumn fx:id="id_palcowka_naprawczaColumn" prefWidth="100.0" text="%DB.id_placowka_naprawcza_tabelePracownik" />
+                              <TableColumn fx:id="id_placowka_naprawczaColumn" prefWidth="100.0" text="%DB.id_placowka_naprawcza_tabelePracownik" />
                            </columns>
                         </TableView>
                      </children>
