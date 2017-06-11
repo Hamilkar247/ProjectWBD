@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="firma.controllers.TableEmployeeController">
+   <children>
+      <ScrollPane maxHeight="1000.0" maxWidth="1000.0">
+         <content>
+            <AnchorPane>
+               <children>
+                  <VBox>
+                     <children>
+                        <TableView fx:id="employeeTableViev">
+                           <columns>
+                              <TableColumn fx:id="id_pracownikColumn" prefWidth="100.0" text="%DB.id_pracownik_tabelePracownik" />
+                              <TableColumn fx:id="imieColumn" prefWidth="100.0" text="%DB.imie_tabelePracownik" />
+                              <TableColumn fx:id="nazwiskoColumn" prefWidth="100.0" text="%DB.naziwsko_tabelePracownik" />
+                              <TableColumn fx:id="stanowiskoColumn" prefWidth="100.0" text="%DB.stanowisko_tabelePracownik" />
+                              <TableColumn fx:id="plecColumn" prefWidth="50.0" text="%DB.Plec_tabelePracownik" />
+                              <TableColumn fx:id="peselColumn" prefWidth="75.0" text="%DB.pesel_tabelePracowni" />
+                              <TableColumn fx:id="data_zatrudnieniaColumn" prefWidth="100.0" text="%DB.data_zatrudnienia_tabelePracownik" />
+                              <TableColumn fx:id="data_urodzeniaColumn" prefWidth="100.0" text="%DB.Data_urodzenia__tabelePracownik" />
+                              <TableColumn fx:id="czy_pracuje_aktualnieColumn" prefWidth="100.0" text="%DB.czy_pracuje_aktualnie_tabelePracownik" />
+                              <TableColumn fx:id="nr_kataColumn" prefWidth="100.0" text="%DB.nr_kata_tabelePracownik" />
+                              <TableColumn fx:id="nr_telefonuColumn" prefWidth="100.0" text="%DB.nr_telefonu_tabelePracownik" />
+                              <TableColumn fx:id="emialColumn" prefWidth="100.0" text="%DB.eamil_tabelePracownik" />
+                              <TableColumn fx:id="id_centralaColumn" prefWidth="100.0" text="%DB.id_centrala_tabelePracownik" />
+                              <TableColumn fx:id="id_placowak_sprzedarzyColumn" prefWidth="100.0" text="%DB.id_placowka_sprzedarzy_tabelePracownik" />
+                              <TableColumn fx:id="id_palcowka_naprawczaColumn" prefWidth="100.0" text="%DB.id_placowka_naprawcza_tabelePracownik" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</VBox>
